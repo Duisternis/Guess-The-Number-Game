@@ -45,4 +45,4 @@ This project is licensed under the [MIT](LICENSE) License.
 
 Have fun playing the game and happy coding! - [@duisternis](https://www.github.com/duisternis)
 
-[Live Demo](https://duisternis.github.io/Guess-The-Number-Game/) | [Report a Bug](https://github.com/your-username/your-repo-name/issues)
+[Live Demo](https://duisternis.github.io/Guess-The-Number-Game/) | [Report a Bug](https://www.github.com/duisternis/Guess-The-Number-Game/issues)
