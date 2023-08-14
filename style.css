@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Moul&family=Moulpali&family=Mountains+of+Christmas&family=Mouse+Memoirs&display=swap");
+/* fonts-imported
+    font-family: 'Moul', cursive;
+    font-family: 'Moulpali', cursive;
+    font-family: 'Mountains of Christmas', cursive;
+    font-family: 'Mouse Memoirs', sans-serif;
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-image: url("./images/spiral-background.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+
+/* Header Styling */
+.header h1 {
+  /* typograpy */
+  color: #fff;
+  text-align: center;
+  font-family: Mountains of Christmas;
+  font-size: 3.75rem;
+  font-weight: 700;
+  width: max-content;
+}
+
+.header {
+  position: relative;
+  margin-block: 3rem;
+  width: max-content;
+  margin-inline: auto;
+}
+
+.badge {
+  position: absolute;
+  top: -0.5rem;
+  right: -3rem;
+  padding: 4px 8px;
+  transform: rotate(35.034deg);
+
+  /* typograpy */
+  color: #f24e1e;
+  text-align: center;
+  font-family: Moul;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  animation: jello 2s ease 0s infinite normal forwards;
+}
+
+/* Content Styling */
+.content {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+
+  margin-inline: auto;
+  margin-bottom: 3rem;
+
+  /* typography */
+  color: white;
+}
+
+.instruct {
+  padding: 2.25rem;
+  margin-inline: 3rem;
+  grid-area: 1 / 1 / 4 / 2;
+  width: fit-content;
+
+  /* styling */
+  border-radius: 40px;
+  background: rgba(217, 217, 217, 0.14);
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.25) inset;
+  backdrop-filter: blur(5px);
+}
+.counter {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.status {
+  padding: 2.25rem;
+  margin-inline: 3rem;
+  grid-area: 1 / 3 / 2 / 4;
+
+  /* styling */
+  border-radius: 40px;
+  background: rgba(217, 217, 217, 0.14);
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.25) inset;
+  backdrop-filter: blur(5px);
+}
+.c-score {
+  display: flex;
+  grid-area: 2 / 2 / 3 / 4;
+}
+.h-score {
+  display: flex;
+  grid-area: 3 / 2 / 4 / 4;
+}
+
+/* instruct section of content */
+.instruct h2 {
+  color: #fff;
+  text-align: center;
+  font-family: Moul;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.instruct ol {
+  padding-block: 2rem;
+  padding-inline: 0.5rem;
+}
+
+.instruct li {
+  display: list-item;
+  list-style-position: inside;
+
+  /* typography */
+  color: #fff;
+  text-align: justify;
+  font-family: Moulpali;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
+}
+
+.instruct p {
+  color: #fff;
+  text-align: center;
+  font-family: Mouse Memoirs;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* counter section of content */
+.counter h2 {
+  /* typography */
+  color: #fff;
+  text-align: center;
+  font-family: Moul;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  width: max-content;
+  margin-inline: auto;
+  margin-top: 3rem;
+}
+
+.real-counter {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr) repeat(3, 0);
+  grid-template-rows: repeat(2, 1fr) repeat(3, 0);
+
+  margin-inline: 4rem;
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+
+  /* styling */
+  border-radius: 40px;
+  background: rgba(217, 217, 217, 0.14);
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.25) inset;
+  backdrop-filter: blur(5px);
+}
+
+.display-counter {
+  border-bottom: 4px dotted white;
+  width: max-content;
+  height: max-content;
+  grid-area: 1 / 1 / 3 / 2;
+  margin-inline: 2rem;
+  margin: auto;
+  font-size: 5rem;
+}
+.up {
+  grid-area: 1 / 2 / 2 / 3;
+  margin: auto;
+  width: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
+}
+.down {
+  grid-area: 2 / 2 / 3 / 3;
+  margin: auto;
+  width: 2rem;
+  padding-top: 0.25rem;
+  padding-bottom: 1rem;
+}
+
+.ok {
+  position: absolute;
+  width: 5rem;
+  height: auto;
+  bottom: -2.5rem;
+  right: -1rem;
+}
+
+/* status section of content */
+.status > * {
+  margin: auto;
+  width: max-content;
+}
+
+.status h2 {
+  color: #fff;
+  text-align: center;
+  font-family: Moul;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.status-message {
+  color: #fff;
+  text-align: justify;
+  font-family: Moulpali;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.icon {
+  margin-block: 1rem;
+}
+
+/* score section of content */
+.c-score {
+  margin: auto;
+  padding-top: 1rem;
+}
+
+.h-score {
+  margin: auto;
+}
+
+.c-message {
+  color: #fff;
+  text-align: right;
+  font-family: Moulpali;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  width: 10rem;
+}
+
+.c-reload {
+  color: #4ecb71;
+  margin-block: auto;
+  margin-inline: 1rem;
+}
+
+.h-reload {
+  margin-block: auto;
+  margin-inline: 1rem;
+  color: red;
+}
+
+/* shitty responsive media query */
+@media only screen and (max-width: 550px) {
+  .header h1 {
+    width: 100vw;
+  }
+  .badge {
+    top: -1rem;
+    right: 2rem;
+  }
+
+  .content {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    width: 100%;
+  }
+
+  .instruct {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .counter {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .status {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .c-score {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .h-score {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+}
+
+.h-reload:hover,
+.c-reload:hover {
+  animation: rotate 1s ease 0s infinite normal forwards;
+  cursor: pointer;
+}
+
+.ok:hover,
+.up:hover,
+.down:hover {
+  cursor: pointer;
+}
+
+/* functionality css */
+.hide {
+  display: none;
+}
+
+.unhide {
+  display: inline;
+}
+
+/* USELESS ANIMATIONS */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateX(-30px) rotate(6deg);
+  }
+
+  30% {
+    transform: translateX(15px) rotate(-6deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(3.6deg);
+  }
+
+  60% {
+    transform: translateX(9px) rotate(-2.4deg);
+  }
+
+  75% {
+    transform: translateX(-6px) rotate(1.2deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
+@keyframes jello {
+  0% {
+    transform: scale3d(1, 1, 1) rotate(35.034deg);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1) rotate(35.034deg);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1) rotate(35.034deg);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1) rotate(35.034deg);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1) rotate(35.034deg);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1) rotate(35.034deg);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1) rotate(35.034deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
