@@ -40,9 +40,13 @@ body::before {
   color: #fff;
   text-align: center;
   font-family: Mountains of Christmas;
-  font-size: 3.75rem;
+  font-size: 5.8rem;
   font-weight: 700;
+  filter: opacity(0);
   width: max-content;
+
+  animation: size_dec 2s linear 4s forwards, appear 3s linear 1s forwards;
+
 }
 
 .header {
@@ -50,6 +54,9 @@ body::before {
   margin-block: 3rem;
   width: max-content;
   margin-inline: auto;
+  top: 40vh;
+  
+  animation: moveup 2s linear 4s forwards;
 }
 
 .badge {
@@ -67,8 +74,9 @@ body::before {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-
-  animation: jello 2s ease 0s infinite normal forwards;
+  filter: opacity(0);
+  
+  animation: jello 2s ease 0s infinite normal forwards,appear 1s linear 6.3s forwards;
 }
 
 /* Content Styling */
@@ -81,10 +89,15 @@ body::before {
 
   margin-inline: auto;
   margin-bottom: 3rem;
+  filter: opacity(0);
+
+  
 
   /* typography */
   color: white;
+  animation: un_hide 1s linear forwards 5s ;
 }
+
 
 .instruct {
   padding: 2.25rem;
@@ -433,5 +446,45 @@ body::before {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* animatin for landing page initialization  */
+
+/* to move up the content  */
+@keyframes moveup{
+  to{
+    transform: translate(0% , -40vh);
+
+  } 
+}
+
+/* decrease the size of heading  */
+
+@keyframes size_dec{
+  to {
+    font-size: 3.75rem;
+  }
+ 
+}
+
+/* the header in slow-mo */
+
+@keyframes un_hide{
+  to{
+    /* display: inline; */
+   filter: opacity(1);
+
+  }
+}
+
+/* badge appear on header */
+
+@keyframes appear{
+  0%{
+    filter: opacity(0);
+  }
+  100%{
+    filter: opacity(1);
   }
 }
