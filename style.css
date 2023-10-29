@@ -444,8 +444,8 @@ body::before {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
-  background-color: #161616;
+  height: 120vh;
+  background-color: #161616fe;
   transition: 1s;
 }
 

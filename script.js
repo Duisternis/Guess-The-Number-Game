@@ -153,7 +153,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 2000);
 
     setTimeout(() => {
-      intro.style.top = "-100vh";
+      intro.style.top = "-200vh";
     }, 2300);
   });
 });
